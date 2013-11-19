@@ -1,0 +1,26 @@
+{
+  "name": "node-diaochapai",
+  "version": "0.1.0",
+  "description": "API for diaochapai.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/perfectworks/note-diaochapai.git"
+  },
+  "keywords": [
+    "node",
+    "diaochapai",
+    "api"
+  ],
+  "author": "perfectworks",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/perfectworks/note-diaochapai/issues"
+  },
+  "dependencies": {
+    "chai": "~1.8.1"
+  }
+}
