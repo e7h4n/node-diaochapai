@@ -1,5 +1,7 @@
 # 调查派 （还没写完）
 
+[![Build Status](https://travis-ci.org/perfectworks/node-diaochapai.png?branch=master)](https://travis-ci.org/perfectworks/node-diaochapai)
+
 [调查派] 的 nodejs api.
 
 ## 使用示例
