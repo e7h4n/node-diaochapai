@@ -21,6 +21,7 @@
     "url": "https://github.com/perfectworks/note-diaochapai/issues"
   },
   "dependencies": {
-    "chai": "~1.8.1"
+    "chai": "~1.8.1",
+    "request": "~2.27.0"
   }
 }

@@ -1,4 +1,4 @@
-# 调查派 （还没写完）
+# 调查派
 
 [![Build Status](https://travis-ci.org/perfectworks/node-diaochapai.png?branch=master)](https://travis-ci.org/perfectworks/node-diaochapai)
 
