@@ -1,5 +1,5 @@
 {
-  "name": "node-diaochapai",
+  "name": "diaochapai",
   "version": "1.0.0",
   "description": "API for diaochapai.com",
   "main": "index.js",
