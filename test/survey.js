@@ -65,5 +65,39 @@ describe('Survey', function () {
                 assert.deepEqual(accureUrl, expectUrl, 'generate correct url');
             });
         });
+
+        describe('#checkSign', function () {
+            beforeEach(function () {
+                survey = new Survey({
+                    appid: '3686003516266650',
+                    secret: 'b7f71b1716722d57c4fadfdf11d91862',
+                    survey: '72790c55-6110-422d-a85c-02c05ac1af79'
+                });
+            });
+
+            it('should return false if sign is invalid', function () {
+                var params = {
+                    survey: '72790c55-6110-422d-a85c-02c05ac1af79',
+                    uid: '12345',
+                    appid: '3686003516266650',
+                    response: '5c60f792-9e64-11e1-98b2-00261824417d',
+                    sign: '88f0778e4be0f4cca108425a0b2bb8e4'
+                };
+
+                assert.isFalse(survey.checkSign(params));
+            });
+
+            it('should return true if sign is valid', function () {
+                var params = {
+                    survey: '72790c55-6110-422d-a85c-02c05ac1af79',
+                    uid: '12345',
+                    appid: '3686003516266650',
+                    response: '5c60f792-9e64-11e1-98b2-00261824417d',
+                    sign: '88f0778e4be0f4cca108425a0b2bb8e3'
+                };
+
+                assert.isTrue(survey.checkSign(params));
+            });
+        });
     });
 });

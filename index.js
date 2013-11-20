@@ -1,7 +1,14 @@
 'use strict';
 
 function makeSignString(params, secret) {
+    if (!secret) {
+        throw new Error('Invalid secret');
+    }
     var sign = Object.keys(params).sort().reduce(function (memo, key) {
+        if (key === 'sign') {
+            return memo;
+        }
+
         return memo + key + '=' + encodeURIComponent(params[key]) + '|';
     }, '');
 
@@ -57,6 +64,10 @@ Survey.prototype.getUrl = function (uid, options) {
         pathname: '/api/survey',
         query: params
     });
+};
+
+Survey.prototype.checkSign = function (params) {
+    return makeSignString(params, this.secret) === params.sign;
 };
 
 exports.Survey = Survey;

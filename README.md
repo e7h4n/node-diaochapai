@@ -45,9 +45,14 @@ survey.exists(uid, function (err, resp) {
 
 获取调查的地址，`options` 参数参考上面的例子。
 
+* `survey.checkSign(params)`
+
+检查回调参数的有效性，`params` 是调查派回调 url 的参数（比如 [expressjs] 中的 `req.params`）。
+
 
 ## License
 
 MIT
 
 [调查派]: http://diaochapai.com
+[expressjs]: http://expressjs.com
